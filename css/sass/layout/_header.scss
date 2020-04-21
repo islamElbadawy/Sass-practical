@@ -1,0 +1,71 @@
+/*
+== Header ==
+*/
+.header {
+    padding: 20px 0;
+    overflow: hidden;
+    border: 1px solid $greyColor;
+    .logo{
+        position: relative;
+        @media #{$minSmall} {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+        @media #{$minMedium} {
+            float: $float-left;
+            width: 30%;
+            text-align: $text-left;
+        }
+        h1{
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+    .navbar{
+        overflow: hidden;
+        width: 70%;
+        float: $float-left;
+        background-color: $redColor;
+        border-radius: 15px;
+        @media #{$minSmall} {
+            float: none;
+            width: 100%;
+            margin-top: 30px;
+            display: block !important;
+        }
+        @media #{$minMedium} {
+            float: $float-left;
+            width: 70%; 
+            margin-top: 1em;
+        }
+        @media #{$maxMobile} {
+            display: none;
+            border-radius: 0;
+            width: 100%;
+        }
+        li{
+            width: 20%;
+            float: $float-left;
+            font-size: 18px;
+            text-align: center;
+            @media #{$maxMobile} {
+                float: none;
+                display: block;
+                width: 100%;
+                text-align: $text-left;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            a {
+                display: block;
+                padding: 20px 10px;
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+}
